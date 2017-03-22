@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <title>Comune di Notaresco</title>
+
+        <link href="js/libs/jquery-mobile/jquery.mobile.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style3.css" rel="stylesheet" type="text/css"/>
+
+        <script src="js/libs/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="js/libs/jquery-mobile/jquery.mobile.min.js" type="text/javascript"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzyZKO27DK4T0mc95odeG4UEeuwHUDEdA" type="text/javascript"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="script_js.js"></script>
+        <script>
+            
+        </script>
+
+    </head>
+    <body>
+        <div data-role="page" id="home">
+            <div data-role="panel" id="pannelloHome">
+                <h3>HOME</h3>
+                <ul data-role="listview">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#lacitta">La Città</a></li>
+                    <li><a href="#itinerari">Itinerari</a></li>
+                    <li><a href="#map-page">Mappa</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+
+
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed">
+                <a href="#pannelloHome" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+
+                <h1>Comune di Notaresco</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div class="logo_comune">
+                    <img src="img/output_immagine.jpg" alt=""/>
+                </div>
+                <div class="testo_home">
+                    <p>Notaresco è un comune collinare della provincia di Teramo, di oltre 6.979 abitanti (dato aggiornato al 31.12.2010), posto ad un’altitudine di 267 metri sul livello del mare, con una superficie di 38,14 chilometri quadrati.
+                        <br>
+                        Notaresco, che dista circa 25 chilometri dal capoluogo di provincia e pochi minuti dal Mare Adriatico, fa parte della Comunità Montana del Vomano, Fino e Piomba ed è gemellato con la città polacca di Plonsk.
+                        <br>
+                        Notaresco ha radici molto antiche. Appartenenuto al nipote di Carlo Magno, Lotario, in epoca medievale il borgo assunse importanza per la presenza di una struttura difensiva (il Civitillo o Rocca del Civitillo) di cui restano poche tracce.
+                        <br>
+                        Di particolare interesse, all’interno del territorio comunale, è L’Abbazia di San Clemente al Vomano, di recente restaurata e riaperta al pubblico. La chiesa, secondo tradizione fondata nel secolo IX per volere di Ermengarda, figlia dell'imperatore Ludovico II, subì restauri nel 1108. All’interno dell’Abbazia, tre navate terminanti con absidi sernicircolari, è conservato il ciborio più antico esistente in Abruzzo (tra il 1136 e il 1147). Altre chiese di origine romanica sono visitabili nel territorio di Notaresco.
+                        <br>
+                        Di particolare interesse è il sito archeologico di Grasciano, scoperto nel 1992, i cui lavori di scavo hanno consentito di riportare alla luce numerosi resti murari ascrivibili ad un probabile insediamento rustico di epoca romana. I pezzi più significativi sono esposti nel Museo civico "G. Romualdi", appositamente istituito.
+                        <br>
+                        Le frazioni e località di Notaresco sono: Guardia Vomano, Pianura Vomano, Capracchia, Casabianca, Colleluccio, Cordesco, Cupo-Casarino, Grasciano, Magnanella, Santa Croce, Sant'Andrea-Caporipe, Sant'Antonio, Scarpone, Vallevignale, Veniglio I, Veniglio II, Via Vomano.
+                        <br>
+                        Fra i cittadini illustri di Notaresco si ricordano: Giuseppe Devincenzi (Notaresco, 1814 – Napoli, 1903), agronomo e uomo politico due volte Ministro dei Lavori Pubblici oltre che fondatore e principale patrono del Regio Museo Industriale di Torino; Ignazio Rozzi (Notaresco, 1795 – Teramo, 1870) naturalista; Giuseppe Romualdi (Notaresco, 1877 – Notaresco, 1943) scrittore e commediografo.
+                        <br>
+                        Posta al centro dell’Italia, immersa nella tranquillità delle colline teramane e nello stesso tempo a pochi chilometri dal mare, Notaresco è facilmente raggiungibile grazie ai buoni collegamenti viari e alla vicinanza degli aeroporti di Roma, Pescara e Ancona.
+                        <br>
+                        La natura, il clima e la possibilità di gustare le eccellenze enogastronomiche del territorio grazie a numerosi produttori di qualità, permettono a Notaresco di proporsi come una meta ideale una vacanza all’insegna della collina mediterranea</p>
+                </div>
+            </div>
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                    
+                </div>
+
+            </div>
+        </div>
+
+        <div data-role="page" id="lacitta">
+            <div data-role="panel" id="pannelloLacitta">
+                <h3>LA CITTA'</h3>
+                <ul data-role="listview">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#lacitta">La Città</a></li>
+                    <li><a href="#itinerari">Itinerari</a></li>
+                    <li><a href="#map-page">Mappa</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+
+                </ul>
+            </div>
+
+            <div data-role="header" data-position="fixed">
+                <a href="#pannelloLacitta" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+                <!--<a href="#" class="ui-btn ui-icon-back ui-btn-icon-left">Indietro</a> !-->
+                <a href="#" data-rel="back" data-icon="back">Indietro</a>
+                <h1>LA CITTA'</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true" id="listaCategorie">
+
+                    <li><a href="#monumenti">MONUMENTI</a></li>
+                    <li><a href="#chiesa">CHIESE</a></li>
+                    <li><a href="#cultura">CULTURA</a></li>
+                    <li><a href="#enogastronomia">ENOGASTONOMIA</a></li>
+                </ul>
+            </div>
+
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div data-role="page" id="monumenti">
+
+            <div data-role="header" data-position="fixed">
+
+                <a href="#" data-rel="back" data-icon="back">Indietro</a>
+                <h1>MONUMENTI</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true" id="listaMonumenti">
+
+                </ul>
+            </div>
+
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div data-role="page" id="contenuto">
+
+            <div data-role="header" data-position="fixed">
+
+                <a href="#" data-rel="back" data-icon="back">Indietro</a>
+                <a href="##" class="ui-btn ui-corner-all ui-icon-star ui-btn-icon-notext">Star Icon</a>
+                <h1>Notaresco</h1>
+            </div>
+            <div data-role="main" class="ui-content" id="contenuto">
+                <ul data-role="listview" data-inset="true" >
+                    <h2 id="nomeContenuto" style="text-align: center"></h2>
+                    <img src="" id="immagineContenuto" style="max-width: 100%"/>
+                    <p id="descrizioneContenuto"></p>
+                </ul>
+            </div>
+
+
+
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div data-role="page" id="chiesa">
+
+            <div data-role="header" data-position="fixed">
+
+                <a href="#" data-rel="back" data-icon="back">Indietro</a>
+                <h1>CHIESA</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true" id="listaChiesa">
+
+                </ul>
+            </div>
+
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <div data-role="page" id="cultura">
+
+            <div data-role="header" data-position="fixed">
+
+                <a href="#" data-rel="back" data-icon="back">Indietro</a>
+                <h1>CULTURA</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true" id="listaCultura">
+                                     
+                    
+                </ul>
+            </div>
+
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div data-role="page" id="enogastronomia">
+
+            <div data-role="header" data-position="fixed">
+
+                <a href="#" data-rel="back" data-icon="back">Indietro</a>
+                <h1>ENOGASTRONOMIA</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true" id="listaEnogastronomia">
+
+                </ul>
+            </div>
+
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="itinerari">
+            <div data-role="panel" id="pannelloItinerari">
+                <h3>ITINERARI</h3>
+                <ul data-role="listview">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#lacitta">La Città</a></li>
+                    <li><a href="#itinerari">Itinerari</a></li>
+                    <li><a href="#map-page">Mappa</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+
+
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed">
+                <a href="#pannelloItinerari" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+                <h1>ITINERARI</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true" id="listaItinerari">
+                    
+                </ul>
+            </div>
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div> 
+        
+                <div data-role="page" id="contenutoiti">
+
+            <div data-role="header" data-position="fixed">
+
+                <a href="#" data-rel="back" data-icon="back">Indietro</a>
+                <a href="##" class="ui-btn ui-corner-all ui-icon-star ui-btn-icon-notext">Star Icon</a>
+                <h1>Notaresco</h1>
+            </div>
+            <div data-role="main" class="ui-content" id="contenutoiti">
+                <ul data-role="listview" data-inset="true">
+                    <h2 id="nomeContenutoiti" style="text-align: center"></h2>
+                    <img src="" id="immagineContenutoiti" style="max-width: 100%"/>
+                    <p id="descrizioneContenutoiti"></p>
+                </ul>
+            </div>
+
+
+
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div data-role="page" id="map-page">
+            <div data-role="panel" id="pannelloMappa">
+                <h3>MAPPA</h3>
+                <ul data-role="listview">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#lacitta">La Città</a></li>
+                    <li><a href="#itinerari">Itinerari</a></li>
+                    <li><a href="#map-page">Mappa</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+
+
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed" id="map-page" data-url="map-page">
+                <a href="#pannelloMappa" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+                <h1>MAPPA</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div data-role="main" class="ui-content" id="map-canvas">
+                    <!-- map loads here... --></div>
+
+            </div>
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="galleria">
+            <div data-role="panel" id="pannelloGalleria">
+                <h3>GALLERIA</h3>
+                <ul data-role="listview">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#lacitta">La Città</a></li>
+                    <li><a href="#itinerari">Itinerari</a></li>
+                    <li><a href="#map-page">Mappa</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+
+
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed">
+                <a href="#pannelloGalleria" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+                <h1>GALLERIA</h1>
+            </div>
+            <div data-role="main">
+                <div class="immagine1">
+                    <img src="img/16143355_10210408294261279_6554102256141404753_n.jpg" alt="" style="max-width: 100%"/>
+                    <p>Notaresco innevata</p>
+                </div>
+                <div class="immagine2">
+                    <img src="img/Immagine.jpg" alt="" style="max-width: 100%"/>
+                    <p>Fronte mare</p>
+                </div>
+
+
+            </div>
+
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div data-role="page" id="contatti">
+            <div data-role="panel" id="pannelloContatti">
+                <h3>CONTATTI</h3>
+                <ul data-role="listview">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#lacitta">La Città</a></li>
+                    <li><a href="#itinerari">Itinerari</a></li>
+                    <li><a href="#map-page">Mappa</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+
+
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed">
+                <a href="#pannelloContatti" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+                <h1>CONTATTI</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <form id="forumContatti">
+                    <div class="ui-field-contain">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome">
+                        <label for="cognome">Cognome:</label>
+                        <input type="text" name="cognome" id="cognome">
+                        <label for="nome">email</label>
+                        <input type="text" name="email" id="email">
+                        <label for="nome">Messaggio:</label>
+                        <textarea cols="40" rows="8" name="messaggio" id="messaggio"></textarea>
+                    </div>
+                    <input type="submit" data-inline="true" value="Invia">
+                </form>
+                <p> NUMERI UTILI </p>
+                <div data-role="collapsible-set" id="fisarmonicaPagine">
+                    <div data-role="collapsible">
+                        <h4>URP - Ufficio relazioni con il pubblico</h4>
+                        <p>Telefono: 085/8950201<BR>
+                            Riferimento: Sig. Emiliano Scarpone<BR>
+                            E-mail: info@comune.notaresco.te.it<BR>
+                            Mail certificata: protocollo@pec.comunedinotaresco.gov.it</p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h4>Ufficio Informazioni Turistiche</h4>
+                        <p>Telefono: 085/895020122<BR>
+                            Riferimento: Sig. Emiliano Rossi<BR>
+                            E-mail: info@comune.turismo.notaresco.te.it<BR>
+                        </p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h4>Musei</h4>
+                        <p>Museo Civico G. Romualdi<br>
+                            Via G. Romualdi 2, 64024<br>
+                            Telefono: 085-8950223 085-895021<br>
+                            Orari di apertura:<br>
+                            Tutti i giorni: 17-19(invernali) – 18-20(estivi)<br>
+                            Nei festivi anche dalle 11 alle 13
+                        </p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h4>Farmacie</h4>
+                        <p>Farmacia Mazzoni del Dr. Alberto Borreca<Br>
+                            Via Circonvallazione 10 - 64024 - Notaresco (Te)<Br>
+                            Telefono: 085/895506<Br>
+                            Codice: 10901; Partita Iva: 00722110673<BR>
+                        </p>
+                        <p>Farmacia Sciarretta del Dr. Alfeo Candelori<br>
+                            Via Antica Salara - 64024 Pianura Guardia Vomano (TE)<br>
+                            Telefono: 085/898101<br>
+                            Codice: 10858; Partita Iva: 00892800673</p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h4>USI - Unione Soccorso Intercomunale</h4>
+                        <p>USI Notaresco (Unione Soccorso Intercomunale)<br>
+                            Via Roma - 64024 Notaresco (Te)<br>
+                            Telefono: 085/8958432<BR>
+                        </p>
+
+                    </div>
+                </div>                
+            </div>
+
+            <div data-role="footer" data-position="fixed" style="text-align: center">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                    <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                </div>
+
+            </div>
+        </div> 
+
+        <div data-role="page" id="trasporti">
+            <div data-role="panel" id="pannelloTrasporti">
+                <h3>TRASPORTI</h3>
+                <ul data-role="listview">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#lacitta">La Città</a></li>
+                    <li><a href="#itinerari">Itinerari</a></li>
+                    <li><a href="#map-page">Mappa</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+
+
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed">
+                <a href="#pannelloTrasporti" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+                <h1>TRASPORTI</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div data-role="collapsible-set" id="fisarmonicaPagine">
+                    <div data-role="collapsible">
+                        <h4>Treno</h4>
+                        <p>
+                            Stazione ferroviaria di Notaresco. 
+                            Per consultare gli orari dei treni visitare il sito web delle Ferrovie dello Stato www.ferroviedellostato.it/.</p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h4>Autobus</h4>
+                        <p>Autolinee Arpa (Autolinee Regionali Pubbliche Abruzzesi): <br>
+                            Per informazioni su tutte le corse per raggiungere Notaresco consultare il sito web www.arpaonline.it/<br>
+                            Le altre autolinee (principali e non) che operano nel territorio teramese (e nel territorio abruzzese in genere) sono le seguenti (consultare il sito web per conoscere destinazioni e orari):<br>
+                            Autolinee Satam (Gruppo La Panoramica): Sito web www.gruppolapanoramica.it/; Tel. 0871.344969<br>
+                            Autolinee Baltour Ciarrocchi Srl: Tel. 0861.554889; Sito web: www.baltour.it/<br>
+                            Autolinee Sangritana: Sito web: www.sangritana.it/<br>
+                            Autolinee Roma-Marche: Sito web www.romamarchelinee.it/<br>
+                            Autolinee Di Febo - Capuani: Sito www.difebocapuani.com/<br>
+                            Autolinee SENA: Collegamenti con la regione Toscana. Per maggiori informazioni sulle tratte e gli orari visitare il sito web www.sena.it/</p>
+                    </div>
+
+                </div>
+
+                <div data-role="footer" data-position="fixed" style="text-align: center">
+                    <div data-role="controlgroup" data-type="horizontal">
+                        <a href="https://www.facebook.com/"><img src="img/social/Y3dI7TtNnYf.png" alt=""/></a>
+                        <a href="https://twitter.com/"><img src="img/social/twitter_logo_round50.png" alt=""/></a>
+                        <a href="https://www.youtube.com/"><img src="img/social/youtube-logo.png" alt=""/></a>
+                    </div>
+
+                </div>
+            </div> 
+    </body>
+</html>
